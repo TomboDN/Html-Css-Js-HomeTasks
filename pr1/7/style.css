@@ -1,0 +1,18 @@
+h1 {
+    color: blueviolet;
+    font-size: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h2 {
+    color: crimson;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h3 {
+    color: goldenrod;
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
