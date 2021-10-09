@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <style>
+        input:valid + span::after{
+            transition: 0.5s;
+            color:green;
+            content: "✓";
+        }
+         input:invalid + span::after {
+            color:red;
+            content: "*";
+        }
+        
+    </style>
+	<title></title>
+</head>
+    <body>
+        <div class="form-group">
+            <form action="">
+                <p>Имя пользователя <input type="text" required="required" placeholder="Введите Имя пользователя"><span></span></p>
+                <p>Сколько вам лет? <input type="number" required="required" min="0" max="110" step="1" placeholder="Введите число"><span></span></p>
+                <p>Вы учитесь или работаете? <input type="text" required="required" placeholder="Напишите вашу занятость"><span></span></p>
+                <p>Сколько у вас свободного времени? <input type="text" required="required" placeholder="Напишите количество"><span></span></p>
+                <p>Что вы обычно делаете в свободное время? <input type="text" placeholder="Опишите"></p>
+                <p><input type="submit" value="Отправить"></p>
+                <input type="reset" value="Очистить форму">
+            </form>
+        </div>
+    </body>
+</html>

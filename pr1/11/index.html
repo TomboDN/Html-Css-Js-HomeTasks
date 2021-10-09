@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Элементы формы</title>
+	<style>
+		body { background: url("https://images.wallpaperscraft.ru/image/linii_svetlyy_zelenyy_belyy_68528_2048x1152.jpg");}
+	</style>
+</head>
+<body>
+    <form action="test.php">
+        <div>ФИО:<p><input type="text" placeholder="Введите ФИО"></p></div>
+        <div>Телефон:<p><input type="tel" placeholder="Введите телефон"></p></div>
+        <div>Из какой вы страны:<br>
+        <select name="country" id="country_">
+            <option value="Russia">Россия</option>
+            <option value="Belarus">Беларусь</option>
+            <option value="Ukraine">Украина</option>
+            <option value="Other">Другая</option>
+        </select>
+        </div>
+        <div>Что лучше?<br>
+            <input type="radio" name="teaCoffee" value="tea"> Чай<Br>
+            <input type="radio" name="teaCoffee" value="coffee"> Кофе<Br>
+        </div>
+        <div>Цвет?<Br>
+            <input type="checkbox">Синий<br>
+            <input type="checkbox">Зелёный<br>
+        </div>
+        <div>Email:<p><input type="email" placeholder="Введите email"></p></div>
+        <div>Пароль:<p><input type="password" placeholder="Введите пароль"></p></div>
+        <p><input type="submit" value="Отправить"></p>
+        <input type="reset" value="Очистить форму"></form>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+</head>
+    <body>
+        <div>
+            Анисимов Даниил Николаевич
+            <canvas id = "figures" width = "250" height = "200" style = "border:1px solid red;">  
+                Этот элемент не поддерживается.  
+              </canvas>
+              <script>
+              var canvas = document.getElementById("figures");
+              var ctx = canvas.getContext('2d');
+              ctx.beginPath();
+              ctx.arc(50,50,40,0,Math.PI*2,true);
+              ctx.closePath();
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.arc(50,50,20,0,Math.PI*2,true);
+              ctx.closePath();
+              ctx.stroke();
+
+              ctx.beginPath();
+              ctx.moveTo(10,180);
+              ctx.lineTo(70,110);
+              ctx.lineTo(110,180);
+              ctx.lineTo(10,180);
+              ctx.closePath();
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.moveTo(30,175);
+              ctx.lineTo(70,125);
+              ctx.lineTo(95,175);
+              ctx.lineTo(30,175);
+              ctx.closePath();
+              ctx.stroke();
+
+              ctx.beginPath();
+              ctx.rect(120,50,100,70);
+              ctx.closePath();
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.rect(130,60,80,50);
+              ctx.closePath();
+              ctx.stroke();
+              </script>
+        </div>
+    </body>
+</html>

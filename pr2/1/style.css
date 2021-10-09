@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: darkmagenta
+}
+ul.menu {
+    list-style: none;
+    margin-left: 250px;
+    position:relative;
+    text-align: center;
+}
+li {display: inline-block;}
+li:after {
+    content: "|";
+    color:blueviolet;
+    display: inline-block;
+    vertical-align: top;
+}
+li:last-child::after {content:none;}
+a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+
+}
+a:hover {
+    color:#c814ff;
+}
+body {
+    background-color:#b7f1c4;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a:hover {
+    background-color: rgb(122, 221, 235);
+}
+p {
+    text-align: center;
+}
