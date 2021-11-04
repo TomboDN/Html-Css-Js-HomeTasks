@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <div id="grid" class="grid-init grid">
+        <div class="subgrid">
+            <div class="box-init box logo">Logo</div>
+            <div id="placeholder" class="box-init box placeholder"></div>
+            <div class="box-init box burgermenu"><input id="menu-toggle" type="checkbox"><label class="menu-btn" for="menu-toggle"><span></span></label></div>    
+        </div>
+        <div id="home" class="box-init box home">Home</div>
+        <div id="about" class="box-init box about">About</div>
+        <div id="services" class="box-init box services">Services</div>
+        <div id="contacts" class="box-init box contacts">Contacts</div>
+    </div>
+    <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at ex a erat placerat fermentum sed rhoncus ligula. Etiam sed ornare quam, eu efficitur augue. Aliquam commodo urna non pharetra gravida. Mauris at ante at mi laoreet efficitur. Duis convallis accumsan neque, non suscipit arcu suscipit ac. Vivamus bibendum, lectus vitae viverra malesuada, tellus ipsum lacinia diam, sed commodo est arcu in lorem. Sed vestibulum aliquet tellus eu fringilla. Sed quis ligula vel mauris feugiat convallis vitae non erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tincidunt blandit tortor, a tempus ipsum varius sit amet. Proin ac enim eget justo finibus eleifend. Nam ut mauris a est hendrerit laoreet. Curabitur id eros sit amet nunc vehicula ullamcorper et at sem. Morbi bibendum arcu sed nisi molestie tempus. Vestibulum volutpat eleifend vulputate. Etiam at euismod turpis, gravida sodales orci.
+
+        Donec malesuada accumsan tempus. Pellentesque viverra hendrerit ex, sit amet tempus lorem scelerisque vitae. Etiam sed ipsum vitae justo maximus ultrices ac vitae dolor. Curabitur gravida justo sed auctor ultricies. Praesent gravida tellus in aliquet laoreet. In sed est laoreet, tincidunt dui at, tincidunt turpis. Donec eget risus iaculis, finibus lacus sed, volutpat nisi.
+        
+        Etiam cursus, leo id venenatis euismod, ligula dui auctor ipsum, sit amet accumsan leo felis vel augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut magna ante, euismod ut velit ac, fermentum faucibus purus. Maecenas vitae enim sed lectus vulputate vulputate. Sed pretium metus sed quam aliquam, pellentesque faucibus elit maximus. In egestas congue lectus, ac placerat turpis hendrerit nec. Maecenas ornare id eros eu pharetra. In hac habitasse platea dictumst. Quisque lobortis odio porttitor elit convallis, sed posuere enim molestie. Fusce laoreet fringilla varius. Donec aliquam ex a tristique semper.
+        
+        Vestibulum facilisis justo nisl, a rutrum sapien cursus nec. Donec hendrerit aliquam felis, eget pharetra erat semper quis. Nunc fermentum lectus eu feugiat eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur porttitor odio nec eros varius varius. Sed magna turpis, mattis at aliquam sed, sodales et eros. Morbi eros mi, vehicula ac odio quis, vestibulum fringilla eros. Nunc lorem lorem, interdum id urna a, eleifend tincidunt metus. Integer luctus turpis sed sapien dictum, vel rhoncus dolor luctus. Vestibulum viverra arcu ac odio sollicitudin consectetur. Curabitur dignissim mauris mauris, nec fringilla lorem condimentum eget. Mauris dapibus sapien euismod sem ultrices tristique. Suspendisse vitae aliquet nisi, eu bibendum ante. Cras hendrerit dolor at mi sagittis consectetur id id nibh. Phasellus tristique augue ut dolor rhoncus, sit amet dignissim neque ultricies. Etiam vitae euismod lectus.
+        
+        Phasellus accumsan, lorem a rhoncus dictum, erat arcu congue odio, eu rhoncus quam nulla at arcu. Cras fringilla ante sed orci pellentesque blandit. Cras rhoncus ipsum neque, in laoreet arcu suscipit id. Aenean eget tristique purus. Maecenas maximus, quam eu elementum bibendum, quam ipsum auctor lectus, in maximus tortor lorem nec risus. Fusce a sem nunc. Donec dignissim convallis massa condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </div>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $('#menu-toggle').click(function(){
+            if ($(this).is(':checked')){
+                $('#placeholder').css({"width": "0vw"})
+                $('#grid').css({"height": "85vh", "width": "98vw", "flex-direction": "column" });
+                $('#home').show(100);
+                $('#about').show(100);
+                $('#services').show(100);
+                $('#contacts').show(100);
+                $('#content').hide(100);
+                $('#home').css({"display": "flex", "justify-content": "center"})
+                $('#about').css({"display": "flex", "justify-content": "center"})
+                $('#services').css({"display": "flex", "justify-content": "center"})
+                $('#contacts').css({"display": "flex", "justify-content": "center"})
+            } else {
+                $('#home').hide(100);
+                $('#about').hide(100);
+                $('#services').hide(100);
+                $('#contacts').hide(100);
+                $('#content').show(100);
+                $('#placeholder').css({"width": "80vw"})
+                $('#grid').css({"height": "3vh", "width": "98vw", "flex-direction": "row"});
+            }
+        });
+        $(window).on('resize', function(){
+            var win = $(this);
+            if (win.width() >= 993) {
+                $('#home').show(100);
+                $('#about').show(100);
+                $('#services').show(100);
+                $('#contacts').show(100);
+                $('#content').show(100);
+                $('#placeholder').css({"width": "0vw"})
+                $('#home').css({"display": "block"});
+                $('#about').css({"display": "block"});
+                $('#services').css({"display": "block"});
+                $('#contacts').css({"display": "block"});
+                $('#grid').css({"height": "3vh", "width": "98vw", "flex-direction": "row"});
+             }
+            if (win.width() <= 992) { 
+                $('#home').hide(100);
+                $('#about').hide(100);
+                $('#services').hide(100);
+                $('#contacts').hide(100);
+                $('#placeholder').css({"width": "80vw"})
+             }
+        });
+        </script>
+</body>
+</html>

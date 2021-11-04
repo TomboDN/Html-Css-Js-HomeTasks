@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+.grid {
+    width: 99vw;
+    height: 98vh;  
+    display: grid;
+    grid-gap: 10px;
+}
+.grid-init {
+    margin: auto; 
+}
+.box-init {
+    font-size: larger; 
+    border: 1px solid red;
+    display: flex; 
+    align-items:center;
+    justify-content: center;
+}
+@media (min-width: 1400px) {
+.grid {
+    grid-template-columns: 1fr 5fr;
+}
+}
+@media (max-width: 992px) {
+    .grid {
+        grid-template-rows: 1fr 1fr;
+    }
+}

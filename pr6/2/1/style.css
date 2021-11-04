@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+.grid {
+    border: 1px solid blue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.grid-init {
+    margin: auto;
+}
+.box-init {
+    padding: 10px;
+    font-size: larger; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 993px) {
+    .grid {flex-direction: row;}
+}
+@media (max-width: 992px) {
+    .grid {
+        flex-direction: column;
+        width: 99vw;
+        height: 98vh;    
+    }
+}

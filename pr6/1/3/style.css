@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    grid-area: my-header;
+}
+.navigation {
+    grid-area: my-nav;
+}
+.main {
+    grid-area: my-main;
+}
+.sidebar {
+    grid-area: my-sidebar;
+}
+.ads {
+    grid-area: my-ads;
+}
+.footer {
+    grid-area: my-footer;
+}
+.grid {
+    display: grid;
+    width: 99vw;
+    height: 98vh;
+    grid-gap: 10px;
+}
+.grid-init {
+    margin: auto; 
+}
+.box-init {
+    font-size: larger; 
+    border: 1px solid red;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+@media (min-width: 1281px) {
+.grid {
+    grid-template-areas:
+        "my-header my-header my-header my-header my-header"
+        "my-sidebar my-nav my-nav my-nav my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-sidebar my-main my-main my-main my-ads"
+        "my-footer my-footer my-footer my-footer my-footer";
+    grid-template-columns: repeat(auto-fit, minmax(60px, auto));
+    grid-auto-rows: minmax(60px, auto);
+}
+}
+@media (min-width: 993px) and (max-width: 1280px) {
+.grid {
+    grid-template-areas:
+        "my-header my-header my-header my-header my-header"
+        "my-nav my-nav my-nav my-nav my-nav"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-sidebar my-main my-main my-main my-main"
+        "my-ads my-footer my-footer my-footer my-footer";
+    grid-template-columns: repeat(auto-fit, minmax(60px, auto));
+    grid-auto-rows: minmax(60px, auto);
+}
+}
+@media (max-width: 992px) {
+    .grid {
+        grid-template-areas:
+        "my-header"
+        "my-nav"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-main"
+        "my-sidebar"
+        "my-ads"
+        "my-footer";
+        grid-auto-rows: minmax(60px, auto);
+    }
+}
