@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+span {
+    text-align: center;
+    color: rgb(92, 92, 92);
+}
+.submain-span {font-weight: bold; width: 5vw;}
+.bold-span {font-weight: bolder;}
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+.main-temp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+@media screen and (max-width: 625px) {
+    .main-span {color: black; font-size: 2em; font-weight: 650;}
+    .main-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    .submain-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        border-top: 1px solid grey;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+    }
+}
+@media screen and (min-width: 626px) and (max-width: 992px) {
+    .main-span {color: black; font-size: 3em; font-weight: 650;}
+    .main-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    .submain-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        border-top: 1px solid grey;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-gap: 10px;
+    }
+}
+@media screen and (min-width: 993px) {
+    .main-span {color: black; font-size: 3em; font-weight: 650;}
+    .main-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    .sumbain {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .submain-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 7px;
+    }
+}

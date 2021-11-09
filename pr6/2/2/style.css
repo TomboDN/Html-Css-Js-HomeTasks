@@ -35,11 +35,11 @@
         order: 4;
     }
     .d-block {
-        width: 66.4%;
+        width: 66%;
         order: 5;
     }
     .e-block {
-        width: 33.4%;
+        width: 33%;
         order: 3;
     }
 }
@@ -53,11 +53,11 @@
         order: 2;
     }
     .c-block {
-        width: 49.4%;
+        width: 49%;
         order: 4;
     }
     .d-block {
-        width: 49.5%;
+        width: 49%;
         order: 5;
     }
     .e-block {

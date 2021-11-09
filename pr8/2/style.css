@@ -1,0 +1,93 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {margin: 0;}
+.bg {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(90deg, orange, purple);
+    background-size:cover;
+}
+.cardholder {
+    position: relative;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    width: 15%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    border-radius: 10px;
+    transition: 1s;
+}
+.card span:first-of-type::after {
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius:100px;
+    transition: 1s;
+    transform: translateY(-400%) scale(8) ;
+    position: relative;
+    z-index: -1;
+}
+.card span:first-of-type {
+    position: relative;
+    z-index: 3;
+    display: block;
+    height: 10vh;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+}
+.card span:last-of-type {
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    width:90%;
+    font-size: 1vw;
+}
+.card button {
+    font-size: 1vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    height: 5vh;
+    width: 7vw;
+    border-radius: 20px;
+    border: gray;
+    cursor: pointer;
+}
+.card-one span:first-of-type::after, .card-one > button {
+    background: orange;
+}
+.card-two span:first-of-type::after, .card-two > button {
+    background:rgb(202, 32, 66);
+}
+.card-three span:first-of-type::after, .card-three > button {
+    background: purple;
+}
+.cardholder:not(.bg):hover > .card:not(:hover) {
+    filter: blur(3px);
+}
+.cardholder:not(.bg):hover > .card:hover {
+    transform: scale(1.2);
+}
