@@ -10,11 +10,12 @@ nav ul {
     flex-direction: row;
 }
 nav ul li {
+    font-family: "SourceSansPro";
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
-    height: 50px;
+    height: 4em;
     width: 10em;
     cursor: pointer;
     overflow-x: hidden;
@@ -69,7 +70,12 @@ nav ul li:hover::before, nav ul li:hover::after {
     transform: scale(1);
 }
 nav ul li a {
-    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
     color: white;
 }
 nav ul li:hover a {

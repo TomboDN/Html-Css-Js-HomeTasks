@@ -1,3 +1,16 @@
+main {
+    float: left;
+    width: 65%;
+}
+footer {
+    clear:both;
+}
+aside {
+    float: right;
+    position: sticky;
+    top: 0.5em;
+    width: 31%;
+}
 article {
     margin-left: 1em;
     margin-right: 1em;
@@ -8,16 +21,8 @@ article img {
     box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.75);
     width: auto;
     height: auto;
-    max-width: 50em;
-    max-height: 50em; 
-}
-aside {
-    padding-left: 0.5em;
-    margin-top: 1em;
-    margin-right: 0.5em;
-}
-article, aside {
-    font-family: Verdana;
+    max-width: 40em;
+    max-height: 50em;
 }
 article ul {
     list-style:circle;
@@ -26,7 +31,17 @@ article ul {
 article span {
     font-weight: 800;
 }
-@media (max-width: 768px) {
+aside section {
+    margin-left: 1em;
+}
+aside a {
+    font-weight: 500;
+    color: black;
+}
+#up { font-style: italic;}
+
+@media (max-width: 320px) {
+    #up { display: none;}
     aside {
         position: relative;
         width: 95%;
@@ -35,7 +50,35 @@ article span {
         width: 95%;
     }
     article img {
-        height: 10em;
-        width: auto;
+        height: auto;
+        width: 15em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+    #up { display: none;}
+    aside {
+        position: relative;
+        width: 96%;
+    }
+    main {
+        width: 96%;
+    }
+    article img {
+        height: auto;
+        width: 20em;
+    }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+    aside {
+        position: relative;
+        width: 98%;
+    }
+    main {
+        width: 98%;
+    }
+    article img {
+        height: auto;
+        width: 30em;
     }
 }

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "NotoSans";
+    font-style: normal;
+    src: url("/courseWork/fonts/NotoSans-Regular.ttf");
+}
+@font-face {
+    font-family: "SourceSansPro";
+    font-style: normal;
+    src: url("/courseWork/fonts/SourceSansPro-Regular.ttf");
+}
 *, *:after, *:before {
     box-sizing: border-box;
     transition: .5s ease-in-out;
@@ -22,6 +32,7 @@ img {
     display: block;
 }
 main, aside {
+    font-family: "NotoSans";
     box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.75);
     border-radius: 10px;
     display: block;
@@ -31,14 +42,4 @@ main, aside {
     margin-right: 0.5em;
     margin-bottom: 1em;
     background:white;
-}
-main {
-    float: left;
-    width: 65%;
-}
-aside {
-    float: right;
-    position: sticky;
-    top: 0;
-    width: 31%;
 }
