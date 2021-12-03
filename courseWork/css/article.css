@@ -1,0 +1,41 @@
+article {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+article img {
+    box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.75);
+    width: auto;
+    height: auto;
+    max-width: 50em;
+    max-height: 50em; 
+}
+aside {
+    padding-left: 0.5em;
+    margin-top: 1em;
+    margin-right: 0.5em;
+}
+article, aside {
+    font-family: Verdana;
+}
+article ul {
+    list-style:circle;
+    line-height: 1.5;
+}
+article span {
+    font-weight: 800;
+}
+@media (max-width: 768px) {
+    aside {
+        position: relative;
+        width: 95%;
+    }
+    main {
+        width: 95%;
+    }
+    article img {
+        height: 10em;
+        width: auto;
+    }
+}

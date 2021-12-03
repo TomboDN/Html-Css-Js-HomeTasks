@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+    <div class="wrapper">
+        <span>Капча на JS</span>
+        <div class="imgButton"><div id="captcha"></div><button id="refresh"><img src="refresh.png" alt=""></button></div>
+        <div class="checkCaptcha"><input placeholder="Введите капчу" type="text" id="inputField"><input id="submitButton" type="submit" value="Проверить"></div>
+        <div id="response"></div>
+    </div>
+    <script>
+        window.onload = init();
+        function init(){
+            createCaptcha();
+            var refreshButton = document.getElementById("refresh");
+            refreshButton.addEventListener('click', createCaptcha);
+            var submitButton = document.getElementById("submitButton");
+            submitButton.addEventListener('click', checkCaptcha);
+        }
+        function createCaptcha(){
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charLen = characters.length;
+            var spSize = Math.floor(Math.random() * (15 - 10)) + 10;
+            var spacingStr = spSize + 'px';
+            for (var i = 0; i < 5; i++){
+                result += characters.charAt(Math.floor(Math.random() * charLen));
+            }
+            var captcha = document.getElementById("captcha");
+            captcha.style.letterSpacing = spacingStr;
+            captcha.innerHTML = result;
+            document.getElementById("inputField").value = ""
+        }
+        function checkCaptcha(){
+            var response = document.getElementById("response");
+            var captcha = document.getElementById("captcha").innerHTML;
+            var input = document.getElementById("inputField").value;
+            if (captcha == input) {
+                response.innerHTML = "Круто! Похоже, Вы не робот";
+                response.style.color = "rgb(53, 216, 80)";
+                setTimeout(createCaptcha, 3000);
+            } else {
+                response.innerHTML = "Неверная капча! Попробуйте ещё раз";
+                response.style.color = "red";
+            }
+            setTimeout(() => response.innerHTML = "", 3000);
+            setTimeout(() => document.getElementById("inputField").value = "", 3000);
+        }
+    </script>
+</body>
+</html>

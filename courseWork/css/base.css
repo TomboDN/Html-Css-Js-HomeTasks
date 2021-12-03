@@ -1,0 +1,44 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+}
+body {
+    position: relative;
+    margin: 0;
+    background: linear-gradient(131deg, rgb(255, 55, 255) 4%, rgb(0, 255, 159) 100%);
+    background-repeat: no-repeat;
+}
+h1 {
+    font-size: 2em;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    display: block;
+}
+main, aside {
+    box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.75);
+    border-radius: 10px;
+    display: block;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    background:white;
+}
+main {
+    float: left;
+    width: 65%;
+}
+aside {
+    float: right;
+    position: sticky;
+    top: 0;
+    width: 31%;
+}

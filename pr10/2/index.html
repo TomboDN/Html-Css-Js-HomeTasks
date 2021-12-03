@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Время до нового года</div>
+        <div id="timer">
+            <div class="sub"><span id="month"></span>
+            <span>Месяцев</span></div>
+            <div class="sub"><span id="day"></span>
+                <span>Дней</span></div>
+            <div class="sub"><span id="hour"></span>
+                <span>Часов</span></div>
+            <div class="sub"><span id="minute"></span>
+                <span>Минут</span></div>
+            <div class="sub"><span id="second"></span>
+                <span>Секунд</span></div>
+        </div>
+        <div><img src="newYear.jpg" width="300px" height="300px" alt=""></div>
+    </div>
+    <script>
+        function test (){
+            var now = new Date();
+            var nextYear = 1 + now.getFullYear();
+            var newDate = Date.parse(nextYear + '-01-01T00:00:00');
+            var difference = (newDate - now);
+            
+            if (difference <=0) {
+                clearInterval(timerNewYear);
+            } else {
+                var result = new Date(difference);
+                var months = result.getUTCMonth();
+                var days = result.getUTCDate() - 1;
+                var hours = result.getUTCHours();
+                var minutes = result.getUTCMinutes();
+                var seconds = result.getUTCSeconds();
+                var str_result = month + " " + day + " " + hours + " " + minutes + " " + seconds;
+            }
+            document.getElementById("month").innerText = months;
+            document.getElementById("day").innerText = days;
+            document.getElementById("hour").innerText = hours;
+            document.getElementById("minute").innerText = minutes;
+            document.getElementById("second").innerText = seconds;
+        } setInterval(test, 1000);
+    </script>
+</body>
+</html>

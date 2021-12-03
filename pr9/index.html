@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="Clock"></div>  
+        <div class="fieldButton">
+            <input placeholder="Новая задача..." type="text" id="taskbar">
+            <button id="create"><img src="edit.png" alt="" width="24px" height="24px"></button>
+        </div>
+        <div class="list"><ul id="tasks"></ul></div>
+    </div>
+    
+
+    <script>
+        function showTime(){
+            var now = new Date();
+            var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + " " ;
+            
+            document.getElementById("Clock").innerHTML = time;
+        }
+        setInterval(showTime, 1000);
+    </script>
+    <script>
+        window.onload = init();
+        function init(){
+            var createButton = document.getElementById("create");
+            createButton.addEventListener('click', createListElement);
+            document.querySelector('input').addEventListener('keydown', function(e){
+                if (e.keyCode === 13) {
+                    createListElement();
+                }
+            })
+        }
+
+        function createListElement(){
+            var task = document.getElementsByTagName("input")[0].value;
+            if (task == ""){
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = task;
+                crossOut(li);
+                document.getElementById("tasks").appendChild(li);
+            }
+        }
+
+        function crossOut(li) {
+            var button = document.createElement('button');
+            button.innerHTML = "X";
+            button.addEventListener('click', removeListElement);
+            li.appendChild(button);
+        }
+        removeListElement = function() {
+            this.parentNode.remove();
+        }
+
+        
+    </script>
+
+</body>
+</html>
