@@ -1,4 +1,5 @@
 * {
+    transition: 0.5s ease-in-out;
     color: white;
     box-sizing: border-box;
     font-family: 'Segoe UI';
@@ -33,7 +34,19 @@ body {
 img {
     border-radius: 50%;
 }
+.sub:hover {
+    transform: scale(1.2);
+}
+img:hover {
+    transform: scale(1.2);
+    border-radius: 25%;
+    margin-top: 2em;
+
+}
 @media screen and (max-width: 768px) {
+    img{
+        max-width: 80vw;
+    }
     #timer {
         font-size: 2vh;
     }

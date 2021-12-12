@@ -6,12 +6,28 @@
 	<title></title>
 </head>
 <body>
-    <div>
-        <button class="button-one">Кнопка 1</button>
-        <button class="button-two">Кнопка 2</button>
-        <button class="button-three">Кнопка 3</button>
-        <button class="button-four"></button>
-        <button class="button-five"><span>Кнопка 5</span></button>
-    </div>
+    <form class="auth">
+        <h1>Логин</h1>
+        <div class="wrapper">
+            <div class="field login-field">
+                <span class="login"></span>
+                <input class="log" placeholder="Почта" type="text" name="login">
+                <span class="warn-icon icon-log"></span>
+            </div>
+            <span class="warning warning-log"></span>
+        </div>
+        <div class="wrapper">
+            <div class="field password-field">
+                <span class="password"></span>
+                <input class="pass" placeholder="Пароль" type="password" name="password">
+                <span class="warn-icon icon-pass"></span>
+            </div>
+            <span class="warning warning-pass"></span>
+        </div>
+        <a href="https://www.google.ru/search?q=Забыл%20пароль">Забыли пароль?</a>
+        <input class="btn" type="button" value="Войти"></input>
+        <span>Нет аккаунта? <a href="https://www.google.ru/search?q=Зарегистрироваться">Зарегистрируйтесь!</a></span>
+    </form>
 </body>
+<script src="script.js"></script>
 </html>

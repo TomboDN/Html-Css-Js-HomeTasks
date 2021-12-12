@@ -1,0 +1,28 @@
+.container {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    padding: 5px;
+}
+.sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        width: auto;
+    }
+}
+@media screen and (min-width: 1921px) {
+    .container {
+        margin: 20em;
+        transform: scale(2);
+    }
+}

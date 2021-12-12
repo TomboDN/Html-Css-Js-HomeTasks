@@ -1,0 +1,165 @@
+* {
+    font-family: 'Segoe UI';
+    transition: 0.8s ease-in-out;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+}
+form {
+    border-radius: 5px;
+    padding: 5px;
+    width:fit-content;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-gap: 20px;
+}
+.wrapper {
+    width: 90%;
+}
+.warning {
+    color: red;
+}
+.field {
+    height: 30px;
+    width: 100%;
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border-bottom: gray 3px solid;
+}
+.log, .pass {
+    width: 80%;
+    border: none;
+    outline: none;
+}
+.inp {
+    outline: none;
+    border: none;
+}
+.login,
+.login::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid;
+}
+.login {
+    overflow: hidden;
+    position: relative;
+    width: 18px;
+    border-radius: 2px;
+    transform: translateX(10%);
+}
+.login::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 3px;
+    left: 0;
+}
+.password {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 11px;
+    border: 2px solid;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom: transparent;
+    margin-top: -12px;
+    margin-right: 6px;
+    transform: translateX(30%) translateY(10%) scale(0.8);
+}
+.password::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    left: -4px;
+    top: 9px;
+}
+.warn-icon {
+    color: red;
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 40px
+}
+.warn-icon::after,
+.warn-icon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    background: currentColor;
+    left: 7px
+}
+.warn-icon::after {
+    top: 2px;
+    height: 8px
+}
+.warn-icon::before {
+    height: 2px;
+    bottom: 2px
+}
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: blue;
+    width: 90%;
+    height: 50px;
+}
+.btn:hover {
+    background:navy;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-1%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(1%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@media screen and (min-width: 1921px) {
+    form {
+        margin: 20em;
+        transform: scale(2);
+    }
+}
